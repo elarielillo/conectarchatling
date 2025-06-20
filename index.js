@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const VERIFY_TOKEN = 'tralalero';
-const N8N_URL = 'https://bot-ramsa-n8n.9v9s7u.easypanel.host/webhook-test/entrada-chat';
+const N8N_URL = 'https://bot-ramsa-n8n.9v9s7u.easypanel.host/webhook/entrada-chat';
 
 app.get('/entrada-chat', (req, res) => {
   const challenge = req.query['hub.challenge'];
