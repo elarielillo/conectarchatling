@@ -29,9 +29,7 @@ app.post('/entrada-chat', async (req, res) => {
   const body = req.body;
   const numero = body?.entry?.[0]?.changes?.[0]?.value?.messages?.[0]?.from || 'sin-numero';
 
-  console.log('📥 Número del cliente:', numero);
-  console.log('📦 Mensaje completo recibido:
-', JSON.stringify(body, null, 2));
+  console.log(`📦 Mensaje completo recibido:\n${JSON.stringify(body, null, 2)}`);
 
   try {
     const response = await axios.post(N8N_URL, body);
